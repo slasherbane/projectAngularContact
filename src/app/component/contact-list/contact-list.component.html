@@ -1,0 +1,11 @@
+<div>
+
+
+  <div *ngFor="let contact of contacts;let index = index">
+    <mat-card  [ngClass]="{ 'plainCard' : index > 0 && index < contacts.length -1,'halfTopCard' :index == 0,'halfBottomCard ': index == contacts.length -1,'onEdit': index == editIndex }" (click)="edit(index)">
+      <mat-card-content>
+        {{contact._fullname}}
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

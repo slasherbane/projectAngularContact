@@ -1,0 +1,25 @@
+<div *ngIf="contact != undefined" style="padding-left: 10vh;">
+
+  <h1>
+    <label> {{contact!._username}}</label>
+
+
+  </h1>
+  <h2>
+    <label> {{contact!._email}}</label>
+  </h2>
+
+
+  <mat-form-field appearance="fill" style="width: 50vh;">
+    <input matInput  type="text" [defaultValue]="contact._fullname" [value]="contact._fullname" (change)="change($event)" />
+  </mat-form-field>
+
+</div>
+
+<div *ngIf="contact == undefined" style="padding-left: 10vh;">
+
+  <h2>
+    Bienvenue sur la liste de gestion des contacts !
+  </h2>
+  <p>Choisissez un contact sur la gauche</p>
+</div>
